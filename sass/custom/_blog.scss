@@ -1,0 +1,145 @@
+/* Blog ****************************************************************************************************************************/
+
+
+
+
+/* Hero *******************************************************/
+.blog-border{
+ border-top-right-radius: 8px;
+ border-bottom-right-radius: 8px;   
+}
+
+
+
+
+/* Snippet block *******************************************************/
+.img-overlay{
+    background-color: $img-overlay;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.blog-img{
+    height: 195px;
+}
+
+.p-blog{
+    padding-bottom: 56px !important;
+}
+
+.fbmh{ //fbmh = featured-blog-minimum-height
+    min-height: 424px;
+}
+
+.fbh{
+    height: 424px;
+}
+
+.bottom-16{
+    bottom: 16px;
+}
+
+
+/* Blog *******************************************************/
+.blog-text, .blog-text p{
+    font-size: rfs-value(18px);
+    line-height: rfs-value(32px);
+    color: $primary800;
+}
+
+
+
+/* Search *******************************************************/
+
+
+
+/* Tag/Categories ***********************************************/
+#category-select{
+    height: 40px;
+    width: 100%;
+    background-color: $white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px 10px 16px;
+}
+
+
+/* Pagination ***************************************************/
+.page-numbers{
+    width: 28px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 2px;
+    border-radius: 4px;
+    color: $primary800;
+    display:inline-block;
+    // transition: background-color .25s ease;
+
+    // &:hover{
+    //     background-color: $primary800;
+    //     color: $white;
+    // }
+
+    &.dots{
+        margin: 0;
+        width: 18px;
+        // &:hover{
+        //     background-color: transparent;
+        //     color: $primary800;
+        // }
+    }
+
+    &.current, &.current:hover{
+        background-color: $primary800;
+        color: $white;
+    }
+
+    &.prev{
+        margin-left: 0;
+    }
+    &.next{
+        margin-right: 0;
+    }
+
+}
+
+
+/* MD *******************************************************************************************************************************/
+@include media-breakpoint-up(md) { //45rem = 720px
+
+    /* Hero *******************************************************/
+    .blog-border{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;   
+    }
+
+
+    /* Pagination ***************************************************/
+    .page-numbers{
+
+        margin: 0 8px;
+
+        &.dots{
+            margin: 0 8px;
+            width: 18px;
+        }
+    }
+
+
+}
+
+
+/* LG *******************************************************************************************************************************/
+// @include media-breakpoint-up(lg) { //63rem = 1008px
+
+
+// }
+
+
+/* XL *******************************************************************************************************************************/
+// @include media-breakpoint-up(xl) { //90rem = 1440px
+	
+
+// }

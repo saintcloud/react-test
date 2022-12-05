@@ -1,0 +1,712 @@
+//Include custom variables
+@import "../../sass/custom/custom-vars";
+$modal-width: 490px;
+
+:focus-visible {
+	outline: solid;
+	outline-color: $secondary500;
+	border-radius: 4px;
+}
+
+body{
+	position: relative;
+	margin: 0 auto;
+	font-family: $font-family-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.125rem;
+	color: $primary800;
+	background-color: $primary100;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	// max-width: 2500px; //TODO cap the site at 2500, but keep it working for top nav on wide screens.
+}
+
+
+/* Headers/Text ****************************************************************/
+h1, .h1{
+	font-weight: 700;
+	font-size: 2.25rem;			//36px
+	line-height: 2.25rem;		//36px
+	color: $primary800;
+}
+
+h2, .h2{
+	font-weight: 700;
+	font-size: 2rem;			//32px
+	line-height: 1.875rem;		//30px
+	color: $primary800;
+}
+
+h3, .h3{
+	font-weight: 400;
+	font-size: 1.875rem;		//30px
+	line-height: 1.875rem;		//30px
+	color: $primary800;
+}
+
+h4, .h4{
+	font-weight: 400;
+	font-size: 1.625rem;		//26px
+	line-height: 1.625rem;		//26px
+	color: $primary800;
+}
+
+h5, .h5{
+	font-weight: 700;
+	font-size: 1.375rem;		//22px
+	line-height: 1.375rem;		//22px
+	color: $primary800;
+}
+
+p.subtitle, .subtitle1{
+	font-weight: 600;
+	font-size: 1.1875rem;		//19px
+	line-height: 1.8125rem;		//29px
+	color: $primary700;
+	margin-bottom: 4px;
+}
+
+p, .body1, .body1 p{
+	font-weight: 400;
+	font-size: 1rem;			//16px
+	line-height: 1.5rem;		//24px
+	color: $primary700;
+}
+
+.body2, .body2 p{
+	font-weight: 400;
+	font-size: .875rem;			//14px
+	line-height: 1.375rem;		//22px
+	color: $primary700;
+}
+
+.overline{
+	font-family: $font-family-sans-serif;
+	font-weight: 600;
+	font-size: .875rem;			//14px
+	line-height: 1rem;			//16px
+	color: $primary700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.larger-text, .larger-text p{
+    font-size: 1.125rem;
+    line-height: 2rem;
+    color: $primary800;
+}
+
+.text-none{
+	text-transform: none;
+}
+
+.no-wrap{
+	white-space: nowrap;
+}
+
+//generic link with no class
+main a:not([class]), a.brown-underline, a.reset_variations, .posted_in a {
+	color: $secondary500;
+	
+	background: linear-gradient(currentColor 0 0) 0% 100% no-repeat;
+	background-size: 0% 2px;
+	transition: background-size .3s;
+	transition-delay: .1s;
+
+	&:hover, &:active, &:focus, &:visited{
+		background-size: 100% 2px;
+		transition-delay: 0s;
+	}
+
+	// &.light{
+	// 	color: $secondary200;
+	// 	&:hover{
+	// 		color: $secondary200;
+	// 	}
+	// }
+}
+
+/* Button ****************************************************************/
+.button, button, input[type="submit"]{
+	// -webkit-appearance: none;
+	background-color: $primary800; 
+	text-transform: uppercase;
+	padding: 12px 16px 8px;
+	line-height: 1rem;
+	font-size: 1rem;
+	font-weight: 700;
+	font-family: $font-family-sans-serif;
+	color: $white;
+	border-radius: 4px;
+	border: 1px solid transparent;
+    min-height: 40px;
+	cursor: pointer;
+	display: inline-block;
+	transition: background-color .5s ease; 
+
+
+	&:hover, &:focus{
+		background-color: $primary700;
+		transition: background-color .5s ease;
+	}
+
+	&.disabled{
+		background-color: $primary300;
+
+		&:hover, &:focus{
+			background-color: $primary300;
+		}		
+	}
+
+	&.fluid, &.full-width{
+		width: 100%;
+	}
+
+	&.transparent{
+		background-color: transparent;
+		border: 1px solid $white;
+
+		&:hover, &:focus{
+			background-color: rgba(255,255,255,0.10); 
+		}
+	}
+
+	&.transparent-dark{
+		background-color: transparent;
+		border: 1px solid $primary800;
+		color: $primary800;
+
+		&:hover, &:focus{
+			background-color: rgba(0,0,0,0.10); 
+		}
+	}
+
+	&.category-btn{
+		background-color: $primary300; 
+		color: $primary700; 
+		padding: 4px 8px 2px;
+		min-height: 26px;
+		line-height: 1rem;
+		font-size: 0.875rem;
+		font-weight: 400;
+
+		&:hover, &:focus{
+			background-color: $primary400; 
+		}
+	}
+
+	&.brown{
+		color: $primary600;
+		background-color: transparent;
+		border: none;
+	}
+
+	&.bright-brown{
+		color: $white;
+		background-color: $secondary500;
+		border: none;
+		&:hover, &:focus{
+			background-color: $secondary800; 
+		}	
+	}
+
+	&.white{
+		background-color: $white;
+		border: 1px solid $primary800;
+		color: $primary800;
+		&:hover{
+			background-color: $primary200;
+		}
+	}
+
+	&.arrow-img{
+		img{
+			transition: margin 0.5s ease;
+		}
+
+		&:hover, &:focus, &:active{
+			img{
+				transition: margin 0.5s ease;
+				margin-left: 16px;
+			}
+		}
+	}
+
+	&.no-border{
+		border: 1px solid transparent;
+	}
+
+	&.small{
+		padding: 7px 16px 5px;
+		min-height: 32px;
+		font-size: .875rem;
+	}
+
+	img{
+		max-width: 100%;
+	}
+
+	// &.send-icon{
+		// padding-left: 48px;
+
+		// &:before{
+		// 	content: url("/wp-content/themes/giddyup/assets/img/send-icon.svg");
+		// }
+	// }
+}
+.fluid-to-fixed{
+	max-width: 100%;
+	width: 100%;
+	font-size: .875rem;
+
+}
+.left-button.mobile{//adding "mobile" will make this button work on mobile and on tablet/web
+	padding-right: 8px !important;
+}
+.right-button.mobile{
+	padding-left: 8px !important;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+// .localhost .button, .localhost button, .localhost input[type="submit"]{
+// 	&.send-icon{
+		
+// 		&:before {
+			// content: url("/giddyco/wp-content/themes/giddyup/assets/img/send-icon.svg");
+// 		}
+// 	}
+// }
+
+
+/* Modal ****************************************************************************/
+#modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    // transition: all .2s;
+    background-color: $bg-overlay;
+    display: none;
+
+	&.show{
+        opacity: 1;
+        display:block;
+        z-index: 101;
+        pointer-events: inherit;
+	}
+}
+
+#modal-cta{
+
+	box-shadow: 0px 20px 32px rgba(0, 0, 0, 0.12);
+	background-color: $white;
+	border-radius: 8px;
+	max-width: $modal-width;
+	padding: 48px 16px 32px;
+	top: 50%;
+    margin-top: -192px;
+	z-index: 110;
+	display: none;
+	position: fixed;
+
+	&.show{
+		display: block;
+	}
+
+	#close-button {
+		position: absolute;
+		top: 29px;
+		right: 21px;
+		border: none;
+		outline: none;
+		z-index: 10;
+
+		&:focus-visible{
+			outline: $primary800 solid 2px;
+			outline: -webkit-focus-ring-color auto 2px;
+		}
+	}
+
+	h3.header{
+		margin: 24px 0 16px;
+	}
+}
+
+
+/* Images *************************************************************************/
+.bg-img{
+    background-position: center; 
+    background-size: cover;
+	background-repeat: no-repeat;
+}
+.bg-img-center-bottom{
+	background-size: cover;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+.bg-img-center-top{
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+
+/* Padding/gutters and z-index *****************************************************/
+.gs-0{
+	padding-left:0 !important;
+}
+.ge-0{
+	padding-right:0 !important;
+}
+
+//used on roadmap so we don't enable negative margin
+.mt-n6{
+	margin-top: -72px !important;
+}
+
+
+
+.z-index1{
+    z-index:1;
+}
+.z-index2{
+    z-index:2;
+}
+.z-index3{
+    z-index:3;
+}
+.z-index4{
+    z-index:4;
+}
+.z-index5{
+    z-index:5;
+}
+.z-index10{
+    z-index:10;
+}
+
+
+
+
+/* Redundant (because of inline styles in header for navigation and hero) *****************************************************************/
+.position-relative{
+	position: relative;
+}
+.position-absolute{
+	position: absolute;
+}
+.text-center{
+	text-align: center;
+}
+.text-start{
+	text-align: left;
+}
+// .text-end{
+// 	text-align: right;
+// }
+
+.d-block{
+	display: block !important;
+}
+.d-inline-block{
+	display: inline-block !important;
+}
+.d-inline{
+	display: inline !important;
+}
+.d-none{
+	display: none !important;
+}
+.d-flex{
+	display: flex !important;
+} 
+.flex-nowrap {
+    flex-wrap: nowrap !important;
+}
+
+.flex-column {
+    flex-direction: column !important;
+}
+
+.justify-content-between {
+	justify-content: space-between !important;
+}
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.align-items-center {
+	align-items: center !important;
+}
+
+.h-100{
+	height: 100% !important;
+}
+.w-100{
+	width: 100% !important;
+}
+
+.mx-auto{
+	margin: 0 auto;
+}
+
+.visually-hidden, .visually-hidden-focusable:not(:focus):not(:focus-within) {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+
+.container, .container-fluid, .container-xl, .container-lg, .container-md {
+    width: 100%;
+    padding-right: var(--bs-gutter-x,1rem);
+    padding-left: var(--bs-gutter-x,1rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.mt-4 {
+    margin-top: 2rem !important; 				//TODO pull from variables
+}
+.mb-2 {
+    margin-bottom: 1rem !important; 			//TODO pull from variables
+}
+.mb-3{
+	margin-bottom: 1.5rem !important; 			//TODO pull from variables
+}
+.mb-4 {
+    margin-bottom: 2rem !important; 			//TODO pull from variables
+}
+.mb-5 {
+    margin-bottom: 3rem !important; 			//TODO pull from variables
+}
+// .py-3{
+// 	padding-top: 24px;
+// 	padding-bottom: 24px;
+// }
+
+/*  Cookie Policy */
+#cookie-container{
+	font-size: 14px;
+	min-height: 82px;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:100;
+	box-shadow: 0 20px 32px rgb(0 0 0 / 40%);
+	background-color: $primary300;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	// border-top: 1px solid $primary800;
+}
+.d-none-c{
+	display: none;
+}
+
+
+
+
+/* MD ************************************************************************************************************************************/
+@media screen and (min-width: 45rem) { //45rem = 720px, which is md breakpoint
+
+
+    /* Headers/Text **********************************************************/
+    h1 {
+        font-weight: 700;
+        font-size: 2.75rem;			//44px
+        line-height: 2.625rem;		//42px
+    }
+
+	h2, .h2{
+		font-size: 2.375rem;		//38px
+		line-height: 2.25rem;		//36px
+	}
+	
+	h3, .h3{
+		font-size: 2.125rem;		//34px
+		line-height: 2.125rem;		//34px
+
+	}
+	
+	h4, .h4{
+		font-size: 1.6875rem;		//27px
+		line-height: 1.75rem;		//28px
+	}
+	
+	h5, .h5{
+		font-weight: 700;
+		font-size: 1.4375rem;		//23px
+		line-height: 1.5rem;		//24px
+	}
+
+
+
+	/* Button ****************************************************************/
+	.fluid-to-fixed{
+		max-width: 250px;
+	}
+	.left-button{
+		padding-right: 8px !important;
+	}
+	.right-button{
+		padding-left: 8px !important;
+	}
+
+
+	/* Padding/gutters ****************************************************************/
+	.gs-md-0{
+		padding-left:0 !important;
+	}
+	.ge-md-0{
+		padding-right:0 !important;
+	}
+	.gs-md-2{
+		padding-left: 16px !important;
+	}
+	.ge-md-2{
+		padding-right: 16px !important;
+	}
+
+	//used on roadmap so we don't enable negative margin
+	.mt-md-n6{
+		margin-top: -72px !important;
+	}
+
+	/* Redundant *****************************************************************/
+	.d-md-block{
+		display: block !important;
+	}
+	.d-md-none{
+		display: none !important;
+	}
+
+	.flex-md-row {
+		flex-direction: row !important;
+	}
+
+	.container{
+		padding-right: 24px !important;
+		padding-left: 24px !important;
+	}
+	.container-md, .container {
+		max-width: 1008px;					//TODO pull from variables
+	}
+
+
+	/*  Cookie Policy */
+	#cookie-container{
+		font-size: 16px;
+	}
+
+}
+
+
+/* LG ************************************************************************************************************************************/
+@media screen and (min-width: 63rem) { //63rem = 1008px, which is lg breakpoint 
+
+    /* Headers/Text **********************************************************/
+	h1 {
+		font-size: 3.5rem;			//56px
+		line-height: 3.3125rem;		//53px
+	}
+
+	h2, .h2{
+		font-size: 2.75rem;			//44px
+		line-height: 2.625rem;		//42px
+	}
+	
+	h3, .h3{
+		font-size: 2.25rem;			//36px
+		line-height: 2.25rem;		//36px
+
+	}
+	
+	h4, .h4{
+		font-size: 1.75rem;			//28px
+		line-height: 1.75rem;		//28px
+	}
+	
+	h5, .h5{
+		font-weight: 700;
+		font-size: 1.5rem;			//24px
+		line-height: 1.5rem;		//25px
+	}
+
+	p.subtitle, .subtitle1{
+		font-size: 1.25rem;			//20px
+		line-height: 1.875rem;		//30px
+	}
+
+	/* Padding/gutters ****************************************************************/
+	.gs-lg-0{
+		padding-left:0 !important;
+	}
+	.ge-lg-0{
+		padding-right:0 !important;
+	}
+	.gs-lg-2{
+		padding-left: 16px !important;
+	}
+	.ge-lg-2{
+		padding-right: 16px !important;
+	}
+
+	/* Redundant *****************************************************************/
+	.d-lg-block{
+		display: block !important;
+	}
+	.d-lg-none{
+		display: none !important;
+	}
+
+	.container-lg, .container-md, .container {
+		max-width: 1439px;					//TODO pull from variables
+	}
+
+}
+
+
+/* XL ************************************************************************************************************************************/
+@media screen and (min-width: 90rem) { //90rem = 1440px, which is XL breakpoint 
+	
+	/* Button ****************************************************************/
+	.fluid-to-fixed{
+		max-width: 320px;
+	}
+
+	/* Padding/gutters ****************************************************************/
+	// .gs-xl-0{
+	// 	padding-left:0 !important;
+	// }
+	// .ge-xl-0{
+	// 	padding-right:0 !important;
+	// }
+
+	/* Redundant *****************************************************************/
+	// .d-xl-block{
+	// 	display: block;
+	// }
+	// .d-xl-none{
+	// 	display: none;
+	// }
+	
+	.container-xl, .container-lg, .container-md, .container {
+		max-width: 1440px;					//TODO pull from variables
+	}
+
+}

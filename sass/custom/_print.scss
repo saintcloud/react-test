@@ -1,0 +1,119 @@
+/***********************************************
+ * Print classes
+ ***********************************************/
+ .print-this{
+    display: none;
+  }
+  @media print {
+    
+    .no-print {
+      display: none !important;
+    }
+    
+    @page
+    {
+        //size: landscape;
+        size: auto;
+        margin: 0mm 2mm;  /* this affects the margin in the printer settings */
+    }
+  
+    *,
+    *:before,
+    *:after {
+        // background: transparent !important;
+        color: #000; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
+        print-color-adjust: exact !important;  /*Firefox*/
+        // print-color-adjust: exact;
+    }
+  
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+  
+    // a[href]:after {
+    //     content: " (" attr(href) ")";
+    // }
+  
+    // abbr[title]:after {
+    //     content: " (" attr(title) ")";
+    // }
+  
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  
+    // a[href^="#"]:after,
+    // a[href^="javascript:"]:after {
+    //     content: "";
+    // }
+  
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+  
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  
+    thead {
+        display: table-header-group;
+    }
+  
+    tr,
+    img {
+        page-break-inside: avoid !important;
+    }
+  
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+        text-transform: uppercase;
+    }
+  
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+    
+    head, header, nav, footer {
+      display: none !important;
+    }
+
+    .print-this {
+      display: block;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;  
+    }
+  
+    .container{
+      width:95%;
+      //background-color: orange !important;
+    }
+
+    .page-break {
+        height: 100vh;
+        width: 100%;
+
+        // display: flex;
+        // align-items: center;
+        // break-after: always;
+        // page-break-after: always;
+        // -webkit-column-break-after: always;
+    }
+  
+  }
+  

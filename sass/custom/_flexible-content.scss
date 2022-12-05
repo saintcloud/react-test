@@ -1,0 +1,1488 @@
+
+/* Alternating Block ****************************************************************/
+
+.easiest-way-2{
+    .active &{
+        animation: easiest2 1s linear infinite;
+    }
+}
+.easiest-way-3{
+    top: 20%;
+    .active &{
+        animation: easiest3 1s linear infinite;
+    }
+}
+.easiest-way-4{
+    top: 20%;
+    .active &{
+        animation: easiest4 1s linear infinite;
+    }
+}
+.easiest-way-5{
+    top: 20%;
+    .active &{
+        animation: easiest5 1s linear infinite;
+    }
+}
+.easiest-way-6{
+    .active &{
+        animation: easiest6 1s linear infinite;
+    }
+}
+.easiest-way-7{
+    .active &{
+        animation: easiest7 1s linear infinite;
+    }
+}
+.easiest-way-8{
+    .active &{
+        animation: easiest8 1s linear infinite;
+    }
+}
+.easiest-way-9{
+    .active &{
+        animation: easiest9 1s linear infinite;
+    }
+}
+.easiest-way-10{
+    .active &{
+        animation: easiest10 1s linear infinite;
+    }
+}
+.easiest-way-11{
+    .active &{
+        animation: easiest11 1s linear infinite;
+    }
+}
+.easiest-way-12{
+    top: -4%;
+    left: 50%;
+    .active &{
+        animation: easiest12 1s ease-in-out infinite;
+    }
+}
+.animate-alt{
+    .active &{
+        animation-play-state: paused;
+        animation-delay: calc(var(--growcryptoscroll) * -1s);  
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+}
+
+@keyframes easiest2 {
+    0% {
+        left: 0%;
+        top: 0%;
+    }
+    20% {
+        top: 0%;
+    }
+    40% {
+        top: 40%;
+    }
+    100% {
+        left: 0%;
+        top: 40%;
+    }
+}
+@keyframes easiest3 {
+    0% {
+        left: 0%;
+        top: 20%;
+    }
+    35% {
+        top: 20%;
+    }
+    45% {
+        top: 0%;
+    }
+    100% {
+        left: 0%;
+        top: 0;
+    }
+}
+@keyframes easiest4 {
+    0% {
+        left: 0%;
+        top: 20%;
+    }
+    40% {
+        top: 20%;
+    }
+    50% {
+        top: 0%;
+    }
+    100% {
+        left: 0%;
+        top: 0;
+    }
+}
+@keyframes easiest5 {
+    0% {
+        left: 0%;
+        top: 20%;
+    }
+    45% {
+        top: 20%;
+    }
+    55% {
+        top: 0%;
+    }
+    100% {
+        left: 0%;
+        top: 0;
+    }
+}
+@keyframes easiest10 { //first (bottom left)
+    0% {
+        top: 20%;
+        left: -80%;
+        transform: rotateZ(0deg); 
+        opacity:0;
+    }
+    16% {
+        opacity: 0;
+    }
+    21%{
+        top: 20%;
+        left: -80%;
+        opacity:.4;
+        transform: rotateZ(0deg);
+    }
+    26% {
+        opacity: 1;
+    }
+    35% {
+        top: 5%;
+        left: -50%;
+        transform: rotateZ(50deg); 
+    }   
+    100%{
+        top: 5%;
+        left: -50%;
+        transform: rotate(50deg);
+    }
+}
+
+@keyframes easiest6 { //second from left
+    0% {
+        opacity: 0;
+        top: 0%;
+        left: -70%;
+        transform: rotateZ(0deg); 
+    }
+    18%{
+        opacity: 0;
+    }
+    23%{
+        opacity: .4;
+        top: 0%;
+        left: -70%;
+        transform: rotateZ(0deg);
+    }
+    28%{
+        opacity: 1;
+    }
+    44% {
+        top: 0%;
+        left: -70%;
+        transform: rotateZ(50deg); 
+    }   
+    100%{
+        top: 0%;
+        left: -70%;
+        transform: rotate(50deg);
+    }
+}
+@keyframes easiest7 { //third from left (middle)
+    0% {
+        opacity: 0;
+        top: 15%;
+        left: -55%;
+        transform: rotateZ(0deg); 
+    }
+    15% {
+        opacity: 0;
+    }
+    20%{
+        opacity: .4;
+        top: 15%;
+        left: -55%;
+        transform: rotateZ(0deg);
+    }
+    25%{
+        opacity: 1;
+    }
+    35% {
+        top: 15%;
+        left: -55%;
+        transform: rotateZ(50deg); 
+    }   
+    100%{
+        top: 15%;
+        left: -55%;
+        transform: rotate(50deg);
+    }
+}
+
+@keyframes easiest9 { //second from right
+    0% {
+        top: -4%;
+        left: 40%;
+        transform: rotateZ(0deg); 
+        opacity: 0;
+    }
+    19% {
+        opacity: 0;
+    }
+    24%{
+        opacity: .4;
+        top: -4%;
+        left: 40%;
+        transform: rotateZ(0deg);
+    }
+    30%{
+        opacity:1;
+    }
+    50% {
+        top: -4%;
+        left: 50%;
+        transform: rotateZ(-50deg); 
+    }   
+    100%{
+        top: -4%;
+        left: 50%;
+        transform: rotate(-50deg);
+    }
+}
+
+@keyframes easiest8 { //farthest right
+    0% {
+        top: 5%;
+        left: 60%;
+        transform: rotateZ(0deg); 
+        opacity: 0;
+    }
+    19% {
+        opacity: 0;
+    }
+    24%{
+        opacity: .4;
+        top: 5%;
+        left: 60%;
+        transform: rotateZ(0deg);
+    }
+    29%{
+        opacity:1;
+    }
+    44% {
+        top: 5%;
+        left: 60%;
+        transform: rotateZ(-50deg); 
+    }   
+    100%{
+        top: 5%;
+        left: 60%;
+        transform: rotate(-50deg);
+    }
+}
+
+
+
+//stragglers
+@keyframes easiest11 { //second from left
+    0% {
+        opacity: 0;
+        top: 6%;
+        left: -80%;
+        transform: rotateZ(0deg); 
+    }
+    24%{
+        opacity: 0;
+    }
+    29%{
+        opacity: .4;
+        top: 6%;
+        left: -80%;
+        transform: rotateZ(0deg);
+    }
+    36%{
+        opacity: 1;
+    }
+    57% {
+        top: 6%;
+        left: -70%;
+        transform: rotateZ(50deg); 
+    }   
+    100%{
+        top: 6%;
+        left: -70%;
+        transform: rotate(50deg);
+    }
+}
+@keyframes easiest12 { //second from right
+    0% {
+        top: -4%;
+        left: 50%;
+        transform: rotateZ(0deg); 
+        opacity: 0;
+    }
+    24% {
+        opacity: 0;
+    }
+    29%{
+        opacity: .4;
+        top: -4%;
+        left: 50%;
+        transform: rotateZ(0deg);
+    }
+    34%{
+        opacity:1;
+    }
+    57% {
+        top: -4%;
+        left: 50%;
+        transform: rotateZ(-50deg); 
+    }   
+    100%{
+        top: -4%;
+        left: 50%;
+        transform: rotate(-50deg);
+    }
+}
+
+
+
+
+// .active .unlock-key-1{
+//     animation: easiest1 1s linear infinite;
+// }
+.active .unlock-key-2{
+    animation: unlock2 1s linear infinite;
+}
+.active .unlock-key-3{
+    animation: unlock3 1s linear infinite;
+}
+.active .unlock-key-4{
+    animation: unlock4 1s linear infinite;
+}
+.active .unlock-key-5{
+    animation: unlock5 1s linear infinite;
+}
+
+.unlock-callout {
+    opacity: 0;
+}
+.active .unlock-callout-1{
+    animation: callout1 1s linear infinite;
+}
+.active .unlock-callout-2{
+    animation: callout2 1s linear infinite;
+}
+.active .unlock-callout-3{
+    animation: callout3 1s linear infinite;
+}
+.active .unlock-callout-4{
+    animation: callout4 1s linear infinite;
+}
+.active .unlock-callout-5{
+    animation: callout5 1s linear infinite;
+}
+
+.active .key-dividers-1{
+    animation: dividers1 1s linear infinite;
+}
+.active .key-dividers-2{
+    animation: dividers2 1s linear infinite;
+}
+.active .key-dividers-3{
+    animation: dividers3 1s linear infinite;
+}
+.active .key-dividers-4{
+    animation: dividers4 1s linear infinite;
+}
+
+.animate-unlock{
+    left: 0;
+}
+.active .animate-unlock{
+    animation-play-state: paused;
+    animation-delay: calc(var(--unlockfuturescroll) * -1s);  
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+
+
+@keyframes unlock2 {
+    0% {
+        left: -5%;
+    }
+    25%{
+        left: -5%;
+    }
+    30% {
+        left: 0%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+@keyframes unlock3 {
+    0% {
+        left: -10%;
+    }
+    25%{
+        left: -10%;
+    }
+    30% {
+        left: -5%;
+    }
+    35% {
+        left: 0%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+@keyframes unlock4 {
+    0% {
+        left: -15%;
+    }
+    25%{
+        left: -15%;
+    }
+    30% {
+        left: -10%;
+    }
+    35% {
+        left: -5%;
+    }
+    40% {
+        left: 0%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+@keyframes unlock5 {
+    0% {
+        left: -20%;
+    }
+    25%{
+        left: -20%;
+    }
+    30% {
+        left: -15%;
+    }
+    35% {
+        left: -10%;
+    }
+    40% {
+        left: -5%;
+    }
+    45% {
+        left: 0%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes callout1 {
+    0% {
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes callout2 {
+    0% {
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    35%{
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes callout3 {
+    0% {
+        opacity: 0;
+    }
+    35%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes callout4 {
+    0% {
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    45%{
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes callout5  {
+    0% {
+        opacity: 0;
+    }
+    42%{
+        opacity: 0;
+    }
+    46%{
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dividers1  {
+    0% {
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    35%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes dividers2  {
+    0% {
+        opacity: 0;
+    }
+    35%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes dividers3  {
+    0% {
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    45%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes dividers4  {
+    0% {
+        opacity: 0;
+    }
+    43%{
+        opacity: 0;
+    }
+    46%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.active .easystake-btn{
+    animation: easystakeBtn 1s linear infinite;
+}
+
+.easystake-l-plant{
+    top: 32%; 
+    left: -22%;
+    .active &{
+        animation: easystakeLPlant 1s linear infinite;
+    }
+}
+.easystake-r-plant{
+    top: 28%;
+    left:  23%;
+    .active &{
+        animation: easystakeRPlant 1s linear infinite;
+    }
+}
+.active .easystake-success-m{
+    animation: easystakeSuccessM 1s linear infinite;
+}
+
+.easystake-process-btn{
+    left: -18%;
+    top: 22%;
+    .active &{
+        animation: easystakeProcessBtn 1s linear infinite;
+    }
+}
+.active .easystake-process-text{
+    animation: easystakeProcessText 1s linear infinite;
+}
+.active .easystake-checkmark{
+    animation: easystakeCheckmark 1s linear infinite;
+}
+.easystake-success-bg{
+    height: 100%;
+    width: 20%;
+    left: 60%;
+    .active & {
+        animation: easystakeSuccessBg 1s linear infinite;
+    }
+}
+
+.active .animate-easystake{
+    animation-play-state: paused;
+    animation-delay: calc(var(--easystakescroll) * -1s);  
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+
+@keyframes easystakeBtn {//black start button
+    0% {
+       left: 0;
+    }
+    34%{
+       left: 0;
+    }
+    40% {
+        left: 36%;
+        opacity: 1;
+    } 
+    41% {
+        opacity: 0
+    }  
+    100%{
+        left: 36%; 
+        opacity: 0;
+    }
+}
+@keyframes easystakeProcessBtn{//green process button
+    0% {
+        top: 21.5%;
+        left: -18%;
+        transform: rotateZ(0deg); 
+    }
+    34%{
+        top: 21.5%;
+        left: -18%;
+        opacity: 0;
+        transform: rotateZ(360deg); 
+    }
+    40% {
+        top: 21.5%;
+        left: 18%;
+        opacity: 1;
+        transform: rotateZ(720deg); 
+    } 
+    46%{
+        top: 21.5%;
+        left: 18%;
+        opacity: 1;
+        transform: rotateZ(1080deg); 
+    }  
+    49%{
+        opacity: 0;
+        transform: rotateZ(1420deg); 
+    }
+    100%{
+        top: 21.5%;
+        left: 18%;
+        opacity: 0;
+        transform: rotateZ(2000deg); 
+    }
+        
+}
+@keyframes easystakeProcessText{//green "processing" text
+    0% {
+
+        opacity: 0;
+     }
+     34%{
+        opacity: 0;
+     }
+     40% {
+         opacity: 1;
+     } 
+     40.1%{
+         opacity: 1;
+     }  
+     100%{
+         opacity: 1;
+     }
+        
+}
+@keyframes easystakeCheckmark{//green checkmark 
+    0% {
+        left: 0%;
+    }
+    48% {
+        opacity: 0;
+        left: 0;
+    }
+    49% {
+         left: 0;
+         opacity: 1;
+    }   
+    53%{
+         opacity: 1;
+         left: -18%;
+    }
+    100%{
+         left: -18%;
+         opacity: 1;
+    }
+}
+@keyframes easystakeSuccessBg {
+    0% {
+        left: 60%;
+        width: 20%;
+        height: 100%;
+    }
+    46% {
+        left: 60%;
+        opacity: 0;
+        width: 20%;
+        height: 100%;
+    }
+    46.1% {
+         opacity: 1;
+         width: 20%;
+         left: 60%;
+         height: 100%;
+    }   
+    53%{
+         opacity: 1;
+         width: 100%;
+         left: 0%;
+         height: 100%;
+    }
+    100%{
+         left: 0%;
+         width: 100%;
+         opacity: 1;
+         height: 100%;
+    }
+}
+
+
+
+@keyframes easystakeLPlant {//left plant
+    0% {
+        transform: rotateZ(0deg); 
+    }
+    34%{
+        transform: rotateZ(0deg);
+    }
+    39% {
+        transform: rotateZ(40deg); 
+    } 
+    41% {
+        transform: rotateZ(20deg); 
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes easystakeRPlant {//right plant
+    0% {
+        transform: rotateZ(0deg); 
+    }
+    34%{
+        transform: rotateZ(0deg);
+    }
+    38% {
+        transform: rotateZ(40deg); 
+    } 
+    42% {
+        transform: rotateZ(20deg); 
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }   
+}
+@keyframes easystakeSuccessM {//top of app cover disappears to reveal success message
+    0% {
+        transform: scale(1);
+    }
+    45%{
+        transform: scale(1);
+        opacity: 1;
+        top: 0;
+    }
+    50% {
+        transform: scale(0);
+        opacity: 0;
+        top: -25%;
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+
+.autogas-needle{
+    top: 13%;
+    left: 2%;
+    .active &{
+        animation: autogasNeedle 1s linear infinite;
+    }
+}
+
+.autogas-fuel{
+    top: 0;
+    left: -48%;
+    .active &{
+        animation: autogasFuel 1s linear infinite;
+    }
+}
+
+.active .animate-autogas{
+    animation-play-state: paused;
+    animation-delay: calc(var(--autogasscroll) * -1s);  
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+
+@keyframes autogasNeedle {
+    0% {
+        transform: rotateZ(0deg); 
+    }
+    25%{
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(124deg); 
+    }   
+    100%{
+        transform: rotate(124deg);
+    }
+    
+}
+@keyframes autogasFuel {
+    0% {
+        left: -48%;
+    }
+    25%{
+        left: -48%;
+    }
+    50% {
+        left: -3%;
+    }   
+    100%{
+        left: -3%;
+    }
+    
+}
+
+
+
+// .buysell-crypto{
+//     // top: 0;
+//     // left: 0;
+//     .active &{
+//         animation: buysellCrypto 1s linear infinite;
+//     }
+// }
+
+// .buysell-fiat{
+//     // top: 0;
+//     // left: 0;
+//     .active &{
+//         animation: buysellFiat 1s linear infinite;
+//     }
+// }
+.buysell-top-arrow{
+    top: -36%;
+    left: 0;
+    .active &{
+        animation: buyselltop 1s linear infinite;
+    }
+}
+.buysell-bottom-arrow{
+    top: 36%;
+    left: 0;
+    .active &{
+        animation: buysellbottom 1s linear infinite;
+    }
+}
+
+.active .animate-buysell{
+    animation-play-state: paused;
+    animation-delay: calc(var(--buysellscroll) * -1s);  
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+// @keyframes buysellFiat {
+//     0% {
+//         left: 0;
+//         top: 0;
+//     }
+//     12% {
+//         left: 0;
+//         top: 0;
+//     }
+//     34%{
+//         left: 30%;
+//         top: 25%;
+//     }
+//     56% {
+//         left: 60%;
+//         top: 0;
+//     }   
+//     78%{
+//         left: 30%;
+//         top: -35%;
+//     }
+//     100%{
+//         left: 0;
+//         top: 0;
+//     }
+// }
+
+// @keyframes buysellCrypto {
+//     0% {
+//         left: 0;
+//         top: 0;
+//     }
+//     12% {
+//         left: 0;
+//         top: 0;
+//     }
+//     34%{
+//         left: -30%;
+//         top: -25%;
+//     }
+//     56% {
+//         left: -60%;
+//         top: 0;
+//     }   
+//     78%{
+//         left: -30%;
+//         top: 25%;
+//     }
+//     100%{
+//         left: 0;
+//         top: 0;
+//     }
+// }
+
+@keyframes buyselltop {
+    0% {
+        left: 0;
+        top: -36%;
+        transform: rotateZ(0deg);
+    }
+
+    12% {
+        left: 0;
+        top: -36%;
+        transform: rotateZ(0deg);
+    }
+    34%{
+        left: -30%;
+        top: 0%;
+        transform: rotate(-90deg);
+    }
+    56% {
+        left: 0;
+        top: 36%;
+        transform: rotate(-180deg);
+    }   
+    78%{
+        left: 30%;
+        top: 0%;
+        transform: rotate(-270deg);
+    }
+    100%{
+        left: 0;
+        top: -36%;
+        transform: rotate(-360deg);
+    }
+}
+@keyframes buysellbottom {
+    0% {
+        left: 0;
+        top: 36%;
+        transform: rotateZ(0deg);
+    }
+
+    12% {
+        left: 0;
+        top: 36%;
+        transform: rotateZ(0deg);
+    }
+    34%{
+        left: 30%;
+        top: 0%;
+        transform: rotate(-90deg);
+    }
+    56% {
+        left: 0;
+        top: -36%;
+        transform: rotate(-180deg);
+    }   
+    78%{
+        left: -30%;
+        top: 0%;
+        transform: rotate(-270deg);
+    }
+    100%{
+        left: 0;
+        top: 36%;
+        transform: rotate(-360deg);
+    }
+}
+
+
+
+.sendreceive-coin1{
+    top: -21%;
+    left: 26%;
+    .active &{
+        animation: sendreceiveCoin1 1s linear infinite;
+    }
+}
+
+.sendreceive-coin2{
+    left: -21%;
+    top: 21%;
+    .active &{
+        animation: sendreceiveCoin2 1s linear infinite;
+    }
+}
+
+.active .animate-sendreceive{
+    animation-play-state: paused;
+    animation-delay: calc(var(--sendreceivescroll) * -1s);  
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+
+@keyframes sendreceiveCoin1 {
+    0% {
+        left: 26%;
+        top: -21%;
+        transform: rotateZ(0deg);
+    }
+    12% {
+        left: 26%;
+        top: -21%;
+        transform: rotateZ(0deg);
+    }
+    30%{
+        left: -13%;
+        top: -25%;
+        transform: rotateZ(0deg);
+    }
+    31%{
+        left: -11%;
+        top: -25%;
+        transform: rotateZ(-60deg);
+    }
+    49% {
+        left: -39%;
+        top: 15%;
+    }   
+    100%{
+        left: -39%;
+        top: 15%;
+    }
+}
+
+@keyframes sendreceiveCoin2 {
+    0% {
+        left: -21%;
+        top: 21%;
+        transform: rotateZ(0deg);
+    }
+    49% {
+        left: -21%;
+        top: 21%;
+        transform: rotateZ(0deg);
+    }
+    71%{
+        left: 12%;
+        top: 24%;
+        transform: rotateZ(0deg);
+    }
+    72%{
+        left: 12%;
+        top: 20%;
+        transform: rotateZ(-50deg);
+    }
+    82% {
+        left: 23%;
+        top: 5%;
+    }   
+    100%{
+        left: 23%;
+        top: 5%;
+    }
+}
+
+
+
+
+/* CTA Block ****************************************************************/
+.validation-error-message{
+    color: $error500;
+    font-size: rfs-value(12px);
+}
+.loader{
+    display:none;
+    right: 8px;
+    top: 8px;
+}
+.rotate {
+    animation: rotation 2s infinite linear;
+}
+  
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+#featured-cta-image{
+    bottom:-76px;
+}
+
+
+
+/* Job Openings Block ****************************************************************/
+// .swiper-jobs {
+//     /* width: 600px; */
+//     height: 440px;
+//   }
+
+  
+#perks-slider{
+
+    .swiper-slide{
+        height: 80%;
+        top: 10%;
+        transition: all .1s ease;
+        color: $primary600;
+
+        p{
+            color: $primary600;
+        }
+    }
+    .swiper-slide-active{
+    
+        top: 0;
+        height: 100%;
+        // padding: 50px 0;
+        transition: all .1s ease;
+    }
+  
+    // #l-gradient{
+    //     left:-6px;
+    //     top:0;
+    //     bottom:0; 
+    //     right:90%; 
+    //     background: linear-gradient(270.46deg, #F6F5F4 36.2%, rgba(246, 245, 244, 0) 99.67%);
+    //     transform: rotate(-180deg);
+    // }
+    // #r-gradient{
+    //     left:90%;
+    //     top:0;
+    //     bottom:0; 
+    //     right:-6px; 
+    //     background: linear-gradient(270.46deg, #F6F5F4 36.2%, rgba(246, 245, 244, 0) 99.67%);
+    // }
+  
+    .swiper-button-prev, .swiper-button-next {
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        margin-top: -38px;
+        background-color: $primary600;
+        height: 45px;
+        width: 45px;
+        border-radius: 23px;
+        img{
+            max-width: unset;
+        }
+        &:after{
+            content: none;
+        }
+    }
+    .swiper-button-prev{
+        left: 0;
+        transform: rotate(180deg);
+        //   padding: 2px 0 0 0;
+    }
+    .swiper-button-next{
+        right: 0;
+        //   padding: 2px 0 0 0;
+    }
+  
+}
+
+
+
+/* Timeline Block ****************************************************************/
+.featured-divider{
+    top:0; 
+    right: -0.5px; 
+    bottom: 48px; 
+    width: 1px; 
+    background-color: $primary400;
+}
+
+
+
+/* Timeline Block ****************************************************************/
+.time-dash {
+    border-right: 2px dashed $primary600;
+    border-left: 2px dashed $primary600;
+    position: absolute;
+    top: 82px;
+    bottom: 82px;
+    left: 50%;
+    width: 0px;
+    margin-left: -2px;
+
+    &:before {
+        content: '';
+        background: $primary600;
+        height: 16px;
+        width: 16px;
+        border-radius: 8px;
+        position: absolute;
+        left: -8px;
+        top: -12px;
+    }
+
+    &:after {
+        content: '';
+        background: $primary600;
+        height: 16px;
+        width: 16px;
+        border-radius: 8px;
+        position: absolute;
+        left: -8px;
+        bottom: -12px;
+    }
+
+    &.started::before{
+        background: $purple500;
+    }
+    &.finished::after{
+        background: $purple500;
+    }
+}
+.time-line{
+    border-right: 2px solid $purple500;
+    border-left: 2px solid $purple500;
+    position: absolute;
+    // top: 82px;
+    // bottom: 82px;
+    left: 50%;
+    width: 0px;
+    margin-left: -2px;    
+}
+
+/* Our Investors block ****************************************************************/
+.investor-logos{
+    // flex: 0 0 33.33%;
+    width: 50%;
+}
+
+
+/* Waitlist Leaderboard Block ****************************************************************/
+.share-row.header-row{
+    border-top: none;
+    background-color: $primary100;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.share-row{
+    min-height: 55px; 
+    flex: 1 1 100%; 
+    padding: 0 24px; 
+    border-top: 1px solid  $primary100; 
+    height: 100%;
+    font-family: $font-family-sans-serif;
+}
+.share-row .text{
+    padding: 20px 0; 
+    font-size: rfs-value(14px);
+    line-height: rfs-value(15px);
+    font-weight: 600;
+}
+.results .position, .results .shares{
+    min-width: 64px; 
+    margin: auto 0;
+    margin-left: 24px;
+}
+.results .shares{
+    min-width: 38px;
+}
+.share-row.header-row .text{
+    font-size: rfs-value(12px);
+    line-height: rfs-value(14px);
+    font-weight: 400;
+}
+
+
+
+
+
+/******************************************************************************************************************************************* Tablet */
+@include media-breakpoint-up(md) {
+
+    /* Alternating Text Block ****************************************************************/
+    .alternating-waitlist{
+        .mc-container{
+            display: flex;
+            .mc-email{
+                width: 100%;
+                margin-right: 8px;
+            }
+            // .mc-sign-up{
+            // }
+        }
+    }
+
+    /* Inputs ****************************************************************/
+    .join-waitlist-block{
+        min-width: 320px;
+    }
+
+
+    /* Job Openings Block ****************************************************************/    
+    #perks-slider{
+
+        .swiper-slide{
+            height: 100%;
+            top: 0;
+            // transition: all .1s ease;
+        }
+        // .swiper-slide-active{
+        //     top: 0;
+        //     height: 100%;
+        //     transition: all .1s ease;
+        // }
+    
+        #l-gradient{
+            left:-6px;
+            top:0;
+            bottom:0; 
+            right:90%; 
+            background: linear-gradient(270.46deg, #F6F5F4 36.2%, rgba(246, 245, 244, 0) 99.67%);
+            transform: rotate(-180deg);
+        }
+        #r-gradient{
+            left:90%;
+            top:0;
+            bottom:0; 
+            right:-6px; 
+            background: linear-gradient(270.46deg, #F6F5F4 36.2%, rgba(246, 245, 244, 0) 99.67%);
+        }
+    
+        // .swiper-button-prev, .swiper-button-next {
+        //     position: absolute;
+        //     top: 50%;
+        //     z-index: 5;
+        //     margin-top: -38px;
+        //     background-color: $primary600;
+        //     height: 45px;
+        //     width: 45px;
+        //     border-radius: 23px;
+        //     img{
+        //         max-width: unset;
+        //     }
+        //     &:after{
+        //         content: none;
+        //     }
+        // }
+        // .swiper-button-prev{
+        //     left: 0;
+        //     transform: rotate(180deg);
+        //     //   padding: 2px 0 0 0;
+        // }
+        // .swiper-button-next{
+        //     right: 0;
+        //     //   padding: 2px 0 0 0;
+        // }
+    
+    }
+
+    /* Our Investors block ****************************************************************/
+    .investor-logos{
+        // flex: 0 0 33.33%;
+        width: 33%;
+    }        
+
+}
+
+
+/******************************************************************************************************************************************* Web */
+// @include media-breakpoint-up(lg) {
+
+// }
+
+
+/******************************************************************************************************************************************* X-Large web */
+// @include media-breakpoint-up(xl) {
+
+// }

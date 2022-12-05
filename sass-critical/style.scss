@@ -1,0 +1,24 @@
+/*!
+Theme Name: Giddy Up
+Theme URI: https://underscores.me/
+Author: Jarom Higley
+Author URI: 
+Description: Critical CSS
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Navigation
+# Hero
+
+
+--------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+@import url('https://use.typekit.net/pzn7ige.css');
+
+@import "critical/reboot";
+@import "critical/global_critical";
+@import "critical/navigation";
+@import "critical/hero";

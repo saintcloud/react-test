@@ -1,0 +1,98 @@
+/* Accordion ************************************************/
+
+.terms-hero{
+    padding: 80px 24px;
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+// .sidebar{
+//     width:100%;
+//     padding-right: 24px;
+//     position: -webkit-sticky; /* for Safari */
+//     position: sticky;
+//     top: 150px;
+//     align-self: flex-start; 
+// }
+.accordion-header{
+    // margin: 100px 0 80px;
+
+    &:first-of-type{
+        margin-top: 0 !important;
+    }
+}
+.accordion-item{
+    border-bottom: 1px solid $primary300;
+    &:last-of-type{
+        border-bottom: none;
+    }
+}
+.faq-anchor{
+    padding-top: 100px;
+    margin-top: -100px;
+}
+.accordion-title{
+    cursor: pointer;
+}
+.accordion-title:after{
+    // content: url("/wp-content/themes/giddyup/assets/img/caret-down.svg"); 
+    transform: rotate(270deg);
+    transition: .35s ease;
+    position: absolute;
+    left: 0;
+    top: 24px;
+}
+.job-posting.accordion-title:after{
+    // content: url("/wp-content/themes/giddyup/assets/img/caret-down-white.svg"); 
+    left: 8px;
+    top: 15px;
+}
+.active .accordion-title:after{
+    transform: rotate(720deg); //360 is simple rotation downward without the spin
+}
+// .localhost .accordion-title:after{
+// 	content: url("/giddyco/wp-content/themes/giddyup/assets/img/caret-down.svg");
+// }
+// .localhost .job-posting.accordion-title:after{
+//     content: url("/giddyco/wp-content/themes/giddyup/assets/img/caret-down-white.svg"); 
+// }
+.accordion-content{
+    display: none;
+
+    p{
+        color: $primary700;
+        font-size: 18px;
+        line-height: 32px;
+    }
+}
+.active .accordion-content{
+    display: block;
+}
+// .category-link a{
+//     display: block;
+//     text-decoration: none;
+//     font-size: 18px;
+//     line-height: 20px;
+//     margin-bottom: 20px;
+// }
+
+
+
+
+/* MD *******************************************************************************************************************************/
+// @include media-breakpoint-up(md) { //45rem = 720px
+
+// }
+
+
+/* LG *******************************************************************************************************************************/
+// @include media-breakpoint-up(lg) { //63rem = 1008px
+
+// }
+
+
+/* XL *******************************************************************************************************************************/
+// @include media-breakpoint-up(xl) { //90rem = 1440px
+	
+// }

@@ -1,0 +1,11 @@
+// Override default variables before the import
+// $body-bg: #000;//useful test
+
+//Import Bootstrap with full customization (loads in only the modules I select)
+@import '../sass-critical/style.scss'; 
+@import '../sass/style.scss'; 
+
+
+// OR... Import Default Bootstrap from Node Modules and its default variables, with custom-vars added as override
+// @import "../sass/custom/_custom-vars.scss";//custom vars without using custom setup
+// @import '~bootstrap/scss/bootstrap.scss'; //Note: You can prefix paths with ~ to resolve modules from node_modules

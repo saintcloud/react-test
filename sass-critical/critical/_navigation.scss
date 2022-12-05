@@ -1,0 +1,695 @@
+/* Main Nav ****************************************************************/
+.main-navigation {
+	display: block;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		li {
+			position: relative;
+			letter-spacing: 1px;
+			margin-right: 9px;//not working
+			
+			&.menu-item-has-children{
+	
+				a{
+					padding: 11px 43px 11px 16px;
+				}
+	
+				//spacing for dropdown menu without losing hover
+				&:before{
+					width: 100%;
+					height: 20px;
+					background-color: transparent;
+					position: absolute;
+					top: 38px;
+					z-index:10;
+					content: '';
+				}
+	
+				//caret
+				&:after{
+					position: absolute;
+					content: url("http://localhost:3000/img/caret-down.svg");
+		
+					top:9px; 
+					right: 16px;
+					transition: .35s ease;
+					transform: rotate(0deg);
+				}
+			}
+	
+			&:hover, &:focus{
+				background-color: rgba(54,49,43,.10);
+				border-radius: 4px;
+	
+				&:after{	
+					transform: rotate(180deg);
+				}
+			}
+	
+			a {
+				display: block;
+				text-decoration: none;
+				font-family: $font-family-sans-serif;
+				font-size: 16px;
+				line-height: 16px;
+				color: $primary800;
+				padding: 11px 16px;
+			}
+
+			.subtitle1{
+				font-weight: 600;
+			}
+
+			ul.sub-menu {
+				// display: none; //makes tabbing not work
+				left: -999em;//allows tabbing to work (along with 'left: auto' below)
+				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+				position: absolute;
+				top: 54px;
+				padding: 20px;
+				// z-index: 99999;
+				background-color: $white;
+				border-radius: 4px;
+	
+				// ul {
+				// 	left: -999em;
+				// 	top: 0;
+				// }
+				// &:hover{
+				// 	display: block;
+				// }
+	
+				li {
+					width: 296px;
+					margin-right: 0;
+
+					&:hover{
+						background-color: transparent;
+					}
+
+					.menu-icon{
+						margin-top: 3px;
+						min-width: 40px;
+					}
+				}
+	
+				a {
+					// width: 296px;
+					border-radius: 4px;
+					margin-bottom: 8px;
+					padding: 12px 12px 12px 15px;
+					&:hover{
+						background-color: $primary100;
+					}
+				}
+	
+				// :hover > a,
+				// .focus > a {
+				// }
+	
+				// a:hover,
+				// a.focus {
+				// }
+
+		
+			}
+
+			&.focus ul.sub-menu{
+				display: block;
+			}
+
+			&:hover, &.focus {
+				> ul.sub-menu{
+					display: block;
+					left: 50%; //auto;
+					margin-left: -168px;
+				}				
+			}
+		}
+	}
+
+	// .current_page_item > a,
+	// .current-menu-item > a,
+	// .current_page_ancestor > a,
+	// .current-menu-ancestor > a {
+	// }
+}
+
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+/* Nav ****************************************************************/
+#site-header {
+    background: $primary100;
+    z-index: 100;
+    position: fixed;
+    width:100%;
+    height: 96px;
+
+	#site-nav{
+		height: 96px;
+	}
+
+	&.promo-banner{
+		height: 160px; //224 with buttons
+	}
+
+	&.transparent{
+		background-color:transparent;
+		transition: all 0.51s ease-in-out;
+	}
+
+	.white-logo{
+		display: block;
+	}
+	.dark-logo{
+		display: none;
+	}
+
+	.changing-button{
+		background-color: transparent;
+		border: 1px solid $white;
+		&:hover{
+			background-color: rgba(255,255,255,0.1);
+		}
+	}
+
+	.main-navigation ul.nav-text-white li {
+
+		&:hover{
+			background-color: rgba(255,255,255,0.1);
+		}
+		
+		&.menu-item-has-children{
+			&:after{
+				content: url("http://localhost:3000/img/caret-down-white.svg");
+			}
+		}
+		a{
+			color: $white;
+		}
+		
+	}
+
+	&.nav-bg{
+		background-color: $primary100;
+		transition: all 0.5s ease-in-out;
+		box-shadow: 0px 20px 32px rgba(0, 0, 0, 0.12);
+
+		.white-logo{
+			display: none;
+		}
+		.dark-logo{
+			display: block;
+		}
+
+		.changing-button{
+			background-color: $primary800;
+			border: 1px solid transparent;
+			&:hover{
+				background-color: $primary700;
+			}
+		}
+
+		.main-navigation ul.nav-text-white li {
+
+			&:hover{
+				background-color: rgba(54,49,43,0.1);
+			}
+
+			&.menu-item-has-children{
+				&:after{
+					content: url("http://localhost:3000/img/caret-down.svg");
+				}
+			}
+
+			a{
+				color: $primary800;
+			}
+		}
+	}
+}
+
+.localhost #site-header .main-navigation ul li.menu-item-has-children:after{
+	// content: url("/giddyco/wp-content/themes/giddyup/assets/img/caret-down.svg");
+}
+.localhost #site-header .main-navigation ul.nav-text-white li.menu-item-has-children:after{
+	// content: url("/giddyco/wp-content/themes/giddyup/assets/img/caret-down-white.svg");
+}
+.localhost #site-header.nav-bg .main-navigation ul.nav-text-white li.menu-item-has-children:after{
+	// content: url("/giddyco/wp-content/themes/giddyup/assets/img/caret-down.svg");
+}
+
+
+#promo-banner{
+	height: 64px; //128px
+	#banner-text{
+		max-height: 64px; //62px
+	}
+	a{
+		color: $primary300;
+		text-decoration: underline;
+	}
+	#close-giddy-banner{
+		// color: $primary300;
+		width: 24px; 
+		height: 30px; 
+		background: $white; 
+		border-radius: 15px;
+		color: $primary700; 
+		top: 16px; 
+		right: 16px;
+	}
+}
+
+#register-button{
+	display: none;
+	font-size: .875rem;
+	line-height: 1rem;
+	margin-left: 7px;
+	margin-right: 65px;
+	padding: 8.5px 10px;
+	min-height: auto;
+}
+
+
+/* Fixed menu adjustment */
+// #site-content{
+// 	padding-top: 87px;
+
+// 	&.promo-banner{
+// 		padding-top: 223px;
+// 	}
+// }
+
+
+
+
+/* Nav Mobile Hamburger Icon ***********************************************************/
+#nav-icon {
+	margin-bottom: .5em;
+	width: 32px;
+	cursor: pointer;
+	// position: fixed;
+	// top: 28px;
+	// right: 16px;
+	position: absolute;
+	top: 28px;
+	right: 16px;
+	z-index:102;
+	display: block;
+}
+#nav-icon:focus-visible{
+	outline: $primary800 solid 2px;
+	outline: -webkit-focus-ring-color auto 2px;
+}
+#nav-icon:after, #nav-icon:before, #nav-icon div {
+	background-color: $primary800;
+	border-radius: 3px;
+	content: '';
+	display: block;
+	height: 3px;
+	margin: 7px 0;
+	transition: all .2s ease-in-out;
+}
+#nav-icon.changing-hamburger:after, #nav-icon.changing-hamburger:before, #nav-icon.changing-hamburger div {
+	background-color: $white;
+}
+#nav-icon.changing-hamburger.sticky-bg:after, 
+#nav-icon.changing-hamburger.sticky-bg:before, #nav-icon.changing-hamburger.sticky-bg div {
+	background-color: $primary800;
+}
+#nav-icon.changing-hamburger.active:after, #nav-icon.changing-hamburger.active:before, #nav-icon.changing-hamburger.active div {
+	background-color: $primary800;
+	transition: all .5s ease-in-out;
+}
+
+// #nav-icon.active:before {
+// 	transform: translateY(10px) rotate(135deg);
+// }
+  
+// #nav-icon.active:after {
+// 	transform: translateY(-10px) rotate(-135deg);
+// }
+  
+// #nav-icon.active div {
+// 	transform: scale(0);
+// }
+#close-menu-btn{
+	top: 26px;
+	right:4px;
+}
+
+
+
+/* Mobile Navigation *****************************************************/
+#mobile-menu{
+	position:fixed;
+	top:-200%;
+	width: 100%;
+	transition: all .75s ease-in-out;
+	z-index:101;
+	border-bottom-left-radius: 4px;
+	border-top-left-radius: 4px;
+
+	&.active{
+		top: 0;
+		// overflow-y: auto; //TODO was mostly working
+		transition: all .75s ease-in-out;
+	}
+
+	.mobile-container{
+		position: fixed;
+		display: flex;
+		flex-flow: column;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+		border-radius: 2px;
+		top: 50%;
+		left: 50%;
+		max-height: calc(100% - 50px);
+		transform: translate(-50%, -50%);
+	}
+
+	#mobile-brand{
+		height: 96px;
+		padding: 0 16px;
+		background-color: $white;
+	}
+
+	#mobile-content{
+		max-height: 380px;
+		background-color: $white;
+		padding: 0 16px 24px;
+		flex: 1;
+		overflow-y: scroll;
+	}
+
+	ul.nav{
+		padding-left: 0;
+		margin-top: 24px;
+		
+		li{
+			font-family: 'Poppins', serif;
+			text-transform: uppercase;
+			font-size: 1rem;
+			letter-spacing: .15em;
+			font-weight: 700;
+			margin-left: 0;
+			display: block;
+			margin-bottom: 40px;
+
+			&.menu-item-has-children{
+			
+				&.active{
+					margin-bottom: 24px;   
+
+					ul.sub-menu{
+						display:block;
+					}
+
+					> a:after{
+						transform: rotate(180deg);
+					}
+				}
+
+				> a:after{
+					// content: url("/wp-content/themes/giddyup/assets/img/caret-down.svg");
+					transform: rotate(0deg);
+					transition: .35s ease;
+					/* font-size: 32px; */
+					font-weight: bold;
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+			}
+
+			a,a:hover, a:active, a:focus,a:visited{
+				text-decoration: none;
+				position: relative;
+				display: block;
+				line-height: 24px;
+				color: $primary800;
+			}
+		}
+
+
+		/* Sub-menu */
+		ul.sub-menu{
+			margin-top: 40px;
+			padding-left: 0;
+			display: none;
+
+			li {
+				margin-bottom: 0;
+				margin-left: 0;
+				padding-left: 0;
+
+				a {
+					margin-bottom: 32px;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 20px;
+					letter-spacing: normal;
+					color: #7B7B7B;
+					text-transform:none;
+				
+					.menu-icon{
+						margin-top: 3px;
+						min-width: 40px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.localhost #mobile-menu ul.nav li.menu-item-has-children > a:after{
+	// content: url("/giddyco/wp-content/themes/giddyup/assets/img/caret-down.svg");
+}
+
+/*  Mobile Menu Overlay */
+#menu-overlay{
+	opacity: 0; 
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:-1;
+	display: none;
+	/* transition: all .75s ease-in-out; */
+
+	&.show{
+		opacity: .35; 
+		display: block;
+		background-color: #000000;
+		/* transition: all .75s ease-in-out; */
+		z-index:100; //top nav is 100 z-index
+	}
+}
+
+
+/* Fixed menu adjustment */
+#site-content{
+	padding-top: 95px;
+
+	&.promo-banner{
+		padding-top: 159px; //223
+	}
+}
+
+
+
+/* Admin Bar Adjustments ****************************************************************/
+#wpadminbar{
+	position: fixed !important;
+}
+.logged-in.admin-bar{
+	// #mobile-menu{
+	// 	margin-top: 46px;
+	// }
+	// #nav-icon{
+	// 	top: 76px; 
+	// }
+	#mobile-menu.active {
+		top: 46px;
+	}
+}
+@media screen and (min-width: 784px) {
+	.logged-in.admin-bar{
+		// #nav-icon{
+		// 	top: 62px;
+		// }
+		#mobile-menu.active {
+			top: 32px;
+		}
+	}
+}
+
+
+
+/* MEDIA QUERIES ************************************************************************************************************************************/
+
+
+/* Custom Modal Breakpoint--This width must equal the width of the modal */
+@media screen and (min-width: $modal-width) {
+
+	#modal-cta{
+		// padding: 64px 32px 32px;
+		margin-left: -245px;
+		left: 50%;
+		
+		// #close-button {
+		// 	top: 45px;
+		// 	right: 37px;
+		// }
+	}
+}
+
+
+@media screen and (min-width: 23.7375rem) { //23.4375rem = 375px, which is a custom breakpoint to introduce the top CTA ASAP
+
+	#register-button{
+		display: inline-block;
+	}
+
+	#mobile-menu {
+		#mobile-content{
+			max-height: 480px;
+		}
+	}
+
+}
+
+
+
+/* MD ************************************************************************************************************************************/
+@media screen and (min-width: 45rem) { //45rem = 720px, which is md breakpoint
+
+	/* Nav ****************************************************************/
+	#site-header {
+		&.promo-banner{
+			height: 160px;
+		}
+	}
+
+	#promo-banner{
+		height: 64px;
+		#banner-text{
+			max-height: 64px;
+		}
+	}
+
+	#site-content{
+		&.promo-banner{
+			padding-top: 159px;
+		}
+	}
+
+	#register-button{
+		// font-size: 1;
+		line-height: 1.125rem;
+		padding: 13px 16px;
+	}
+
+	#modal-cta{
+		padding: 64px 32px 32px;
+		// left: 50%;
+		// margin-left: -245px;
+
+		#close-button {
+			top: 45px;
+			right: 37px;
+		}
+	}
+
+
+	/* Nav Mobile Hamburger Icon ***********************************************************/
+	#nav-icon {
+		right: 24px;
+	}
+
+	#mobile-menu {
+		#mobile-content{
+			max-height: 480px;
+		}
+		#mobile-brand{
+			padding: 0 24px;
+		}
+		#mobile-content{
+			padding: 0 24px 24px;
+		}
+	}
+
+}
+
+
+/* LG ************************************************************************************************************************************/
+@media screen and (min-width: 63rem) { //63rem = 1008px, which is lg breakpoint (Note: map-get($grid-breakpoints,2)) or list.nth() wont' work without more includes)
+
+
+	// /* Nav ****************************************************************/
+	// #site-header {
+	// 	&.promo-banner{
+	// 		height: 168px;
+	// 	}
+	// }
+
+	// #promo-banner{
+	// 	height: 72px;
+	// }
+	
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+
+	#nav-icon{
+		display: none;
+	}
+
+	.site-navigation{
+		display: none;
+	}
+
+	#register-button{
+		margin-right: 0;
+	}
+
+	/*   Mobile Menu */
+	#mobile-menu{
+		display:none;
+	}
+	#mobile-menu.active{
+		display:none;
+	}
+
+	#menu-overlay{
+		display: none;
+	
+		&.show{
+			display:none;
+		}
+	}
+
+}
+
+
+/* XL ************************************************************************************************************************************/
+// @media screen and (min-width: 90rem) { //90rem = 1440px, which is XL breakpoint 
+	
+
+// }

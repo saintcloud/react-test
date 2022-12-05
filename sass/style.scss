@@ -1,0 +1,78 @@
+/**
+ * Custom Boostrap selection below made by Jarom Higley
+ * https://getbootstrap.com/docs/5.0/customize/sass/
+ * 
+ */
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+@import "custom/custom-vars";
+
+//3. Include remainder of required Bootstrap stylesheets
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+//4. Include any optional Bootstrap components as you like
+// Layout & components
+// @import "bootstrap/scss/root";//1KB
+// @import "bootstrap/scss/reboot";//8KB (breaks if removed and type isn't removed also)
+// @import "bootstrap/scss/type";//3KB (has "reboot" dependency)
+@import "bootstrap/scss/images";//1KB
+@import "bootstrap/scss/containers";//1KB (.container, .container-fluid, .container--{breakpoint}
+@import "bootstrap/scss/grid";//20KB 
+// @import "bootstrap/scss/tables"; //5KB
+// @import "bootstrap/scss/forms";//35KB ouch
+// @import "bootstrap/scss/buttons";//23KB ouch
+@import "bootstrap/scss/transitions";//0KB
+// @import "bootstrap/scss/dropdown";//8KB
+// @import "bootstrap/scss/button-group";//3KB
+// @import "bootstrap/scss/nav";//3KB
+// @import "bootstrap/scss/navbar";//11KB
+// @import "bootstrap/scss/card";//5KB
+// @import "bootstrap/scss/accordion";//5 KB
+// @import "bootstrap/scss/breadcrumb";//0KB
+// @import "bootstrap/scss/pagination";//4KB
+// @import "bootstrap/scss/badge";//0KB
+// @import "bootstrap/scss/alert";//3KB
+// @import "bootstrap/scss/progress";//2KB
+// @import "bootstrap/scss/list-group";//10KB
+// @import "bootstrap/scss/close";//2KB
+// @import "bootstrap/scss/toasts";//2KB
+// @import "bootstrap/scss/modal";//7KB
+// @import "bootstrap/scss/tooltip";//3KB
+// @import "bootstrap/scss/popover";//5KB
+// @import "bootstrap/scss/carousel";//7KB
+// @import "bootstrap/scss/spinners";//2KB
+// @import "bootstrap/scss/offcanvas";//3KB
+
+// Helpers
+@import "bootstrap/scss/helpers";//4KB
+
+// Utilities
+@import "bootstrap/scss/utilities/api";//74KB ouch
+// scss-docs-end import-stack
+
+
+// 5. Add additional custom code here
+@import "custom/global";
+@import "custom/glossary";
+@import "custom/faq";
+@import "custom/blog";
+@import "custom/front";
+@import "custom/slick";
+@import "custom/flexible-content";
+@import "custom/woocommerce";
+@import "custom/footer";
+
+
+//6. Print should always be last
+@import "custom/print";
+ 
+
+//These are bundled packages based on https://getbootstrap.com/docs/5.0/getting-started/contents/#css-files (not interested in just reboot or just utilities)
+//if using these, then remove everything above and just add everything (bootstrap) or just the grid with limited utilities (bootstrap-grid)
+// @import "bootstrap/scss/bootstrap-grid";//includes grid and flex utilities, 122KB CSS with default 6 breakpoints (each breakpoint adds 20KB for grid and utlities)
+// @import "bootstrap/scss/bootstrap";//includes everything, 309 KB CSS

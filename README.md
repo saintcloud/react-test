@@ -1,3 +1,32 @@
+Steps taken for additional modules:
+
+https://www.apollographql.com/docs/react/get-started/
+
+npm i -D react-router-dom
+
+npm list
+
+├── @apollo/client@3.7.1
+├── @testing-library/jest-dom@5.16.5
+├── @testing-library/react@13.4.0
+├── @testing-library/user-event@13.5.0
+├── graphql@16.6.0
+├── react-dom@18.2.0
+├── react-router-dom@6.4.3
+├── react-scripts@5.0.1
+├── react@18.2.0
+└── web-vitals@2.1.4
+
+https://www.youtube.com/watch?v=9KGuI0UmpMw
+
+npm install react-bootstrap bootstrap
+
+npm install sass
+
+https://react-bootstrap.netlify.app/getting-started/introduction/
+https://create-react-app.dev/docs/adding-bootstrap/#using-a-custom-theme
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

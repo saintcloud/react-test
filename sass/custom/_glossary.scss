@@ -1,0 +1,197 @@
+/* Glossary ******************************************************************************************************************************/
+
+
+/* Glossary Search/Anchors *******************************************************/
+#site-header.no-shadow{
+    box-shadow:none;
+}
+#glossary-search-block{
+    position: sticky;
+    top: 96px; 
+    z-index: 9;
+    margin-top: -2px; /* strange safari issue fix */
+    background-color: $primary100;
+    transition: all .5s ease-out;
+
+    .admin-bar &{
+        top: 128px;
+    }
+}
+#glossary-search-block.sticky-glossary{
+    transition: all .5s ease-out;
+    box-shadow: 0px 20px 32px rgb(0 0 0 / 12%);
+}
+// .glossary-block{
+// }
+#glossary-search{
+    height: 64px;
+
+    #glossary-search-btn{
+        height: 24px;
+    }
+
+    #input-search{
+        width: 100%;
+
+        #js-search-glossary{
+            border:none;
+            background-color: $primary100;
+            outline: 0;
+            // &:focus, &:focus-visible{
+            //     outline: solid;
+            //     outline-color: brown;
+            // }
+        }
+    }
+    #letter-search{
+
+        .glossary-letter-link{
+            font-size: rfs-value(28px);
+            line-height: rfs-value(30px);
+            min-width: 32px;
+            color: $primary900;
+
+
+            &.disabled {
+                pointer-events: none;
+                cursor: default;
+                text-decoration: none;
+                color: $primary400;
+            }
+        }
+        .glossary-letter-empty{
+            cursor: not-allowed;
+            font-size: rfs-value(28px);
+            line-height: rfs-value(28px);
+            min-width: 32px;
+            color: $primary400;
+        }
+    }
+}
+
+
+
+/* Glossary Terms *******************************************************/
+.glossary-letter{
+    color: $primary400; 
+    font-weight: 700;
+    font-size: rfs-value(24px);
+    line-height: rfs-value(25px);
+}
+.letter-line{
+    border-top: 1px solid $primary300; 
+    margin-top: 10px;
+}
+.letter-main{
+
+    padding-top: 210px;
+    margin-top: -210px; 
+
+    .glossary-term{
+        // display:block;
+        // text-decoration:none;
+        position:relative;
+        z-index:1; /* glossary-anchor covefs up links without this */
+    
+        // &:hover{
+        //     background-color: #D9D9D9;
+        //     border-radius: 8px;
+        // } 
+    }
+
+    hr{
+        border-top: 1px solid $primary300;
+    }
+    
+}
+
+mark {
+    background-color: #ff9;
+    color: inherit; 
+    font-style: inherit;
+    font-weight: inherit;
+
+    .glossary-letter &{
+        background-color: transparent;
+    }
+}
+
+
+
+/* MD ************************************************************************************************************************************/
+@include media-breakpoint-up(md) { //45rem = 720px
+
+    /* Glossary Search/Anchors *******************************************************/
+    #glossary-search-block{
+        border-bottom: 1px solid $primary300;
+    }
+
+    /* Glossary Terms *******************************************************/
+    // .glossary-letter-block{
+    // }
+
+    .letter-sidebar{
+        position: sticky;
+        top: 215px;
+        align-self: flex-start;
+    }
+
+    .glossary-letter{
+        color: $primary300; 
+        font-weight: 400;
+        font-size: rfs-value(150px);
+        line-height: rfs-value(120px);
+    }
+
+
+}
+
+
+/* LG ************************************************************************************************************************************/
+@include media-breakpoint-up(lg) { //63rem = 1008px
+
+    /* Glossary Search/Anchors *******************************************************/
+    // #glossary-search-block{
+    // }
+    #glossary-search{
+        height: 80px;
+        overflow:hidden;
+    }
+
+    #letter-search{
+        margin-top: 75px;
+        height: 50px;
+    }
+
+    #input-search{
+
+        margin-top: -120px;
+        transition: margin .5s ease;
+
+        &.show-web{
+            margin-top: 120px;
+            transition: margin .5s ease;
+        }
+
+        #glossary-search-close{
+            right: 8px;
+            top: 5px;
+            height: 28px;
+            cursor: pointer;
+        }
+    }
+
+    .glossary-cta{
+        position: sticky;
+        top: 215px;  //245px?
+        align-self: flex-start;
+    }
+
+}
+
+
+/* XL ************************************************************************************************************************************/
+// @include media-breakpoint-up(xl) { //90rem = 1440px
+	
+
+// }
